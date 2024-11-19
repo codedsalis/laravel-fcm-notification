@@ -27,7 +27,9 @@ class FcmChannelTest extends TestCase
     /** @var Notifiable|\Mockery\MockInterface */
     protected $notifiable;
 
-    public function setUp()
+    protected $events;
+
+    public function setUp(): void
     {
         $this->events = m::mock(FcmChannel::class);
         $this->client = m::mock(Client::class);
